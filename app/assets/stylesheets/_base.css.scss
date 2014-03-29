@@ -1,0 +1,38 @@
+// Text File
+// AUTHOR:   manawasp
+// MAIL:     clovis.kyndt@gmail.com
+// FILE:     /home/manawasp/Rails/HexatylaEditor/app/assets/stylesheets/_base.css.scss
+// ROLE:     TODO (some explanation)
+// CREATED:  2014-03-29 17:12:18
+// MODIFIED: 2014-03-29 17:12:24
+
+$blueprint-grid-columns : 24;
+$blueprint-grid-width   : 30px;
+$blueprint-grid-margin  : 10px;
+$font-color             : #333;
+
+@import "compass/reset";
+@import "compass/utilities";
+@import "blueprint";
+
+$white: #fff;
+$black: #000;
+$grey1: #111;
+$grey2: #222;
+$grey3: #333;
+$grey4: #444;
+$grey5: #555;
+$grey6: #666;
+$grey7: #777;
+$grey8: #888;
+$grey9: #999;
+$grey10: #aaa;
+$grey11: #bbb;
+$grey12: #ccc;
+$grey13: #ddd;
+$grey14: #eee;
+
+.background_white { background-color: $white; }
+.background_black { background-color: $white; }
+.background_dark_silver { background-color: $grey4; }
+.background_light_silver { background-color: $grey10; }

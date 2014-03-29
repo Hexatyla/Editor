@@ -1,0 +1,10 @@
+Hexatyla
+
+<% @link_menu.each do |obj| %>
+  <%= link_to(obj.getLink()) do %>
+    <%= image_tag(obj.getImage(), class: "background_dark_silver") %>
+    <%= image_tag(obj.getNewImage(), class: "background_dark_silver") %>
+    <%= obj.getName() %>
+  <% end %>
+<% end %>
+
