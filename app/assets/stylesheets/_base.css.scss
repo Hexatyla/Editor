@@ -13,6 +13,8 @@ $font-color             : #333;
 
 @import "compass/reset";
 @import "compass/utilities";
+@import "compass/css3";
+@import "compass/utilities";
 @import "blueprint";
 
 $white: #fff;
@@ -47,10 +49,21 @@ $link_light_grey: #edf2f8;
 $dark_blue_font: #7e8490;
 $light_blue_font: #aab2bd;
 
+a, ul, li { text-decoration:none; }
+
+.hidden { display: none }
+.visible { display: block }
+
+.full-width { width: 100%; }
+.full-height { height: 100%; }
+
 .left { left:0; }
 .right { right:0; }
 .fleft { float: left; }
 .fright { float: right; }
+
+.absolute { position: absolute; }
+.relative { position: relative; }
 
 .font-10 { font-size: 10px; }
 .font-11 { font-size: 11px; }
@@ -65,30 +78,57 @@ $light_blue_font: #aab2bd;
 .no-padding { padding: 0; }
 .no-margin  { margin: 0; }
 
-.margin-10 { margin: 10px; }
-.margin-20 { margin: 20px; }
+.margin-5   { margin: 5px; }
+.margin-10  { margin: 10px; }
+.margin-15  { margin: 15px; }
+.margin-20  { margin: 20px; }
+
+.padding-5  { padding: 5px; }
 .padding-10 { padding: 10px; }
+.padding-15 { padding: 15px; }
 .padding-20 { padding: 20px; }
 
-.padding-left-10 { padding-left: 10px; }
-.padding-left-20 { padding-right: 20px; }
-.padding-right-10 { padding-right: 10px; }
-.padding-right-20 { padding-right: 20px; }
-.padding-top-10 { padding-top: 10px; }
-.padding-top-20 { padding-top: 20px; }
-.padding-bottom-10 { padding-bottom: 10px; }
-.padding-bottom-20 { padding-bottom: 20px; }
+.padding-left-5     { padding-left: 5px; }
+.padding-left-10    { padding-left: 10px; }
+.padding-left-20    { padding-right: 20px; }
+.padding-right-5    { padding-right: 5px; }
+.padding-right-10   { padding-right: 10px; }
+.padding-right-20   { padding-right: 20px; }
+.padding-top-5      { padding-top: 5px; }
+.padding-top-10     { padding-top: 10px; }
+.padding-top-20     { padding-top: 20px; }
+.padding-bottom-5   { padding-bottom: 5px; }
+.padding-bottom-10  { padding-bottom: 10px; }
+.padding-bottom-20  { padding-bottom: 20px; }
 
-.margin-left-10 { margin-left: 10px; }
-.margin-left-20 { margin-left: 20px; }
-.margin-right-10 { margin-right: 10px; }
-.margin-right-20 { margin-right: 20px; }
-.margin-top-10 { margin-top: 10px; }
-.margin-top-20 { margin-top: 20px; }
+.margin-left-5    { margin-left: 5px; }
+.margin-left-10   { margin-left: 10px; }
+.margin-left-20   { margin-left: 20px; }
+.margin-right-5   { margin-right: 5px; }
+.margin-right-10  { margin-right: 10px; }
+.margin-right-20  { margin-right: 20px; }
+.margin-top-5     { margin-top: 5px; }
+.margin-top-10    { margin-top: 10px; }
+.margin-top-20    { margin-top: 20px; }
+.margin-bottom-5  { margin-bottom: 5px; }
 .margin-bottom-10 { margin-bottom: 10px; }
 .margin-bottom-20 { margin-bottom: 20px; }
 
-.background_white { background-color: $white; }
-.background_black { background-color: $white; }
-.background_dark_silver { background-color: $grey4; }
-.background_light_silver { background-color: $grey10; }
+.background-white { background-color: $white; }
+.background-mate  { background-color: #eaedf2; }
+.background-black { background-color: $white; }
+.background-dark-silver { background-color: $grey4; }
+.background-light-silver { background-color: $grey10; }
+
+.white { color: $white }
+.black { color: $black }
+
+.bold { font-weight: 700; }
+
+.t-center { text-align: center; }
+.t-left   { text-align: left; }
+.t-right  { text-align: right; }
+
+.v-middle { vertical-align: middle; }
+.v-top    { vertical-align: top; }
+.v-bottom { vertical-align: bottom; }

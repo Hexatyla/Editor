@@ -14,7 +14,49 @@
 
 @import "base";
 
+body {
+  @extend .background-mate, .font-12;
+}
+
+a {
+  @extend .white;
+}
+
 /* Begin : Left Menu */
 
+#right-menu {
+
+  @extend .absolute, .fleft, .full-height;
+  width: 180px;
+  z-index: 50;
+  background-color: $blue10;
+
+  #title {
+    @extend .bold, .font-18, .padding-15;
+    color: #96bee2;
+    background-color: $blue8;
+  }
+
+  .choice-categorie {
+    @extend .font-14;
+    padding: 15px 2px 15px 10px;
+    color: $light_blue_font;
+
+    &:hover {
+      @extend .silver-14;
+      background-color: #323a4f;
+    }
+
+    img {
+      @extend .v-middle, .padding-right-5
+    }
+
+    .information-choice-categorie {
+      @extend .fright, .margin-right-10, .font-11, .margin-top-5, .white, .padding-5;
+      @include border-radius(3px);
+      background-color: #3473a9;
+    }
+  }
+}
 
 /* End : Left Menu */

@@ -1,11 +1,17 @@
-<%= content_tag :div, class: "" do %>
-  <%= content_tag(:div, "Hexatyla") %>
+<%= content_tag :div, id: "right-menu",class: "" do %>
+  <%= content_tag(:div, "Hexatyla Editor", id: "title") %>
 
   <% @link_menu.each do |obj| %>
     <%= link_to(obj.getLink()) do %>
-      <%= image_tag(obj.getImage(), class: "background_dark_silver") %>
-      <%= image_tag(obj.getNewImage(), class: "background_dark_silver") %>
-      <%= obj.getName() %>
+      <%= content_tag :div, class: "choice-categorie", ref: "#{obj.getName()}" do%>
+
+      <%= content_tag(:div, "none",
+                        class: "information-choice-categorie hidden", ref: "#{obj.getName()}")%>
+        <%= image_tag(obj.getImage(), class: "") %>
+        <%= image_tag(obj.getNewImage(), class: "hidden") %>
+        <%= obj.getName() %>
+
+      <% end %>
     <% end %>
   <% end %>
 
