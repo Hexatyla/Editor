@@ -163,11 +163,44 @@ a {
       }
     }
   }
-
-  #information-menu-map {
-  }
 }
 /* End : Information menu */
+
+/* Begin : home-content */
+#home-content {
+  @extend .fleft, .visible;
+  margin-left:450px;
+  margin-top:50px;
+}
+/* End : home-content */
+
+/* Begin : data-element-content */
+
+/* End : data-element-content */
+#data-elements-content {
+  .box {
+    @extend .margin-top-5, .fleft, .white, .margin-left-5, .margin-right-5, .padding-20;
+    background-color: #fdfdfd;
+
+    .title {
+      @extend .font-16, .padding-bottom-5, .margin-bottom-20;
+      border-bottom: 1px solid #ccc;
+      color: $grey5;
+    }
+
+    label {
+      @extend .visible;
+
+      .info {
+        @extend .inline-block, .w-125, .t-center, .margin-top-5, .margin-bottom-5;
+        @extend .padding-top-10, .padding-bottom-10, .v-middle, .bold;
+        @include border-radius(5px);
+        color: #fefefe;
+        background-color: #4fc0e8;
+      }
+    }
+  }
+}
 
 /* Begin : Flat Gui*/
 input.gui-flat
