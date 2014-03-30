@@ -15,6 +15,7 @@ $font-color             : #333;
 @import "compass/utilities";
 @import "compass/css3";
 @import "compass/utilities";
+@import "compass/css3/transition";
 @import "blueprint";
 
 $white: #fff;
@@ -51,19 +52,26 @@ $light_blue_font: #aab2bd;
 
 a, ul, li { text-decoration:none; }
 
-.hidden { display: none }
-.visible { display: block }
+.pointer { cursor: pointer; }
 
-.full-width { width: 100%; }
-.full-height { height: 100%; }
+.hidden       { display: none }
+.visible      { display: block }
+.inline-block { display: inline-block; }
 
-.left { left:0; }
-.right { right:0; }
-.fleft { float: left; }
+.full-width   { width: 100%; }
+.full-height  { height: 100%; }
+
+.left     { left: 0; }
+.right    { right: 0; }
+.top      { top: 0; }
+.bottom   { bottom: 0; }
+
+.fleft  { float: left; }
 .fright { float: right; }
 
 .absolute { position: absolute; }
 .relative { position: relative; }
+.fixe     { position: fixed; }
 
 .font-10 { font-size: 10px; }
 .font-11 { font-size: 11px; }
@@ -74,6 +82,9 @@ a, ul, li { text-decoration:none; }
 .font-24 { font-size: 24px; }
 .font-32 { font-size: 32px; }
 .font-36 { font-size: 36px; }
+
+.cube-48 { width: 48px; height: 48px }
+.cube-24 { width: 24px; height: 24px }
 
 .no-padding { padding: 0; }
 .no-margin  { margin: 0; }
@@ -124,6 +135,8 @@ a, ul, li { text-decoration:none; }
 .black { color: $black }
 
 .bold { font-weight: 700; }
+.italic { font-style:italic; }
+.bold-normal { font-weigth: normal; }
 
 .t-center { text-align: center; }
 .t-left   { text-align: left; }
@@ -132,3 +145,6 @@ a, ul, li { text-decoration:none; }
 .v-middle { vertical-align: middle; }
 .v-top    { vertical-align: top; }
 .v-bottom { vertical-align: bottom; }
+
+.clean-border { border: 0; }
+.no-decoration { text-decoration: none; }

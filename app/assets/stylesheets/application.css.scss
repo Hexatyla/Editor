@@ -23,10 +23,9 @@ a {
 }
 
 /* Begin : Left Menu */
-
 #right-menu {
 
-  @extend .absolute, .fleft, .full-height;
+  @extend .fixe, .fleft, .full-height;
   width: 180px;
   z-index: 50;
   background-color: $blue10;
@@ -35,6 +34,7 @@ a {
     @extend .bold, .font-18, .padding-15;
     color: #96bee2;
     background-color: $blue8;
+    height: 20px;
   }
 
   .choice-categorie {
@@ -48,7 +48,7 @@ a {
     }
 
     img {
-      @extend .v-middle, .padding-right-5
+      @extend .v-middle, .padding-right-5;
     }
 
     .information-choice-categorie {
@@ -58,5 +58,230 @@ a {
     }
   }
 }
-
 /* End : Left Menu */
+
+/* Begin : Top Menu */
+#top-menu {
+  @extend .full-width, .fixe;
+  height: 50px;
+  z-index: 49;
+  background-color: $blue6;
+
+  div {
+    @extend .padding-left-10, .padding-right-10, .inline-block, .white, .font-14, .padding-top-20;
+    height: 30px;
+
+    &.right {
+      @extend .fright;
+      border-left: 1px solid #559fe0;
+    }
+
+    &.left {
+      @extend .fleft;
+      border-right: 1px solid #559fe0;
+    }
+
+    &.first {
+      margin-left:180px;
+    }
+
+    &.input {
+      @extend .no-padding, .padding-top-5, .padding-left-10, .padding-right-10;
+      height: 45px;
+    }
+  }
+
+  a {
+    @extend .padding-left-10, .padding-right-10, .pointer;
+    height: 50px;
+
+    &:hover {
+      background-color: $blue4;
+    }
+
+    &.right {
+      @extend .fright;
+      border-left: 1px solid #559fe0;
+    }
+
+    &.left {
+      @extend .fleft;
+      border-right: 1px solid #559fe0;
+    }
+
+    &.first {
+      margin-left:180px;
+    }
+
+    img {
+      @extend .margin-top-10;
+      margin-left: 2px;
+    }
+  }
+}
+/* End : Top Menu */
+
+/* Begin : Flat Gui*/
+input.gui-flat
+{
+  @extend .padding-10, .bold, .font-12, .white, .top, .no-margin;
+  background: transparent;
+  border: 1px solid #559fe0;
+  @include border-radius(3px);
+
+  &.little {
+    padding: 7px 17px;
+    width: 30px;
+    margin: 0px 7px 0px 7px;
+  }
+
+  &.minus {
+    @extend .full-width, .bold-normal, .font-14;
+    padding: 3px 5px;
+  }
+
+  &.silver {
+    @extend .white;
+    border-color: #99aec8;
+    background-color: #99aec8;
+  }
+
+  &.light-silver {
+    @extend .white, .bold-normal, .grey8;
+    border-color: #99aec8;
+  }
+
+  &.resize {
+    padding: 7px 17px;
+  }
+
+  &:-moz-placeholder {
+    font-weight: 500; // extend don't run :(...
+    font-style: italic; // extend don't run :(...
+    color: #f2f2f2;
+  }
+  &:-ms-input-placeholder  {
+    font-weight: 500; // extend don't run :(...
+    font-style: italic; // extend don't run :(...
+    color: #f2f2f2;
+  }
+  &::-webkit-input-placeholder {
+    font-weight: 500; // extend don't run :(...
+    font-style: italic; // extend don't run :(...
+    color: #f2f2f2;
+  }
+}
+
+/* Button */
+
+.button {
+  @extend .pointer, .clean-border, .t-center, .font-16, .white, .no-decoration, .inline-block;
+  -webkit-font-smoothing: antialiased;
+  background-color: #62adee;
+  padding: 9px 20px;
+  white-space: nowrap;
+  @include border-radius(5px);
+  @include single-transition(all, 0.2s, ease-in-out);
+
+  &:hover {
+    background-color: #3473a9;
+  }
+
+  &.little {
+    margin: 0 4px;
+    padding: 7px 17px;
+  }
+
+  &.green {
+    background-color: #a0d468;
+
+    &:hover {background-color: #8cc051}
+  }
+
+  &.yellow {
+    background-color: #ffcd5a;
+
+    &:hover {background-color: #f6bb43}
+  }
+
+  &.red {
+    background-color: #ec5564;
+
+    &:hover {background-color: #db4453}
+  }
+}
+
+/* end button */
+/* Button applicaiton color class */
+$buildings      : #fb6e52;
+$heros          : #ffce55;
+$objects        : #a0d468;
+$projectiles    : #48cfae;
+$capacities     : #4fc0e8;
+$spells         : #5d9cec;
+$ameliorations  : #ac92ed;
+$effects        : #e78abf;
+
+.button {
+  &.buildings-bg {
+    background-color: $buildings;
+
+    &:hover {background-color: darken($buildings, 20%)}
+  }
+
+  &.heros-bg {
+    background-color: $heros;
+
+    &:hover {background-color: darken($buildings, 20%)}
+  }
+
+  &.objects-bg {
+    background-color: $objects;
+
+    &:hover {background-color: darken($objects, 20%)}
+  }
+
+  &.projectiles-bg {
+    background-color: $projectiles;
+
+    &:hover {background-color: darken($projectiles, 20%)}
+  }
+
+  &.capacities-bg {
+    background-color: $capacities;
+
+    &:hover {background-color: darken($capacities, 20%)}
+  }
+
+  &.spells-bg {
+    background-color: $spells;
+
+    &:hover {background-color: darken($spells, 20%)}
+  }
+
+  &.ameliorations-bg {
+    background-color: $ameliorations;
+
+    &:hover {background-color: darken($ameliorations, 20%)}
+  }
+
+  &.effects-bg {
+    background-color: $effects;
+
+    &:hover {background-color: darken($effects, 20%)}
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* End : Flat Gui */

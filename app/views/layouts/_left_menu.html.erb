@@ -1,3 +1,12 @@
+<!-- Text File
+# AUTHOR:   manawasp
+# MAIL:     clovis.kyndt@gmail.com
+# FILE:     layouts/_left_menu.html.erb
+# ROLE:     TODO (some explanation)
+# CREATED:  2014-03-29 20:01:58
+# MODIFIED: 2014-03-29 21:31:46
+-->
+
 <%= content_tag :div, id: "right-menu",class: "" do %>
   <%= content_tag(:div, "Hexatyla Editor", id: "title") %>
 
@@ -7,7 +16,7 @@
 
       <%= content_tag(:div, "none",
                         class: "information-choice-categorie hidden", ref: "#{obj.getName()}")%>
-        <%= image_tag(obj.getImage(), class: "") %>
+        <%= image_tag(obj.getImage(), class: "cube-24") %>
         <%= image_tag(obj.getNewImage(), class: "hidden") %>
         <%= obj.getName() %>
 
