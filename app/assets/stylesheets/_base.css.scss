@@ -16,7 +16,13 @@ $font-color             : #333;
 @import "compass/css3";
 @import "compass/utilities";
 @import "compass/css3/transition";
+@import "blueprint/typography";
 @import "blueprint";
+
+body {
+  font-family:$blueprint-font-family;
+  font-size:12px;
+}
 
 $white: #fff;
 $black: #000;

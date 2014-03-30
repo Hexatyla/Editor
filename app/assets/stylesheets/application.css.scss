@@ -198,6 +198,11 @@ a {
         color: #fefefe;
         background-color: #4fc0e8;
       }
+
+      .light-info {
+        @extend .inline-block, .w-75, .t-left, .v-middle, .bold;
+        color: $grey5;
+      }
     }
   }
 }
@@ -271,6 +276,12 @@ input.gui-flat
   &.little {
     margin: 0 4px;
     padding: 7px 17px;
+  }
+
+  &.minus {
+    @extend .font-12;
+    margin: 2px 1px;
+    padding: 3px 9px;
   }
 
   &.green {
