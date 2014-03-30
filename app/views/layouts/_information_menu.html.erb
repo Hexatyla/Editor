@@ -4,19 +4,63 @@
 # FILE:     views/layouts/_information_menu.html.erb
 # ROLE:     TODO (some explanation)
 # CREATED:  2014-03-30 11:26:08
-# MODIFIED: 2014-03-30 11:52:31
+# MODIFIED: 2014-03-30 15:10:50
 -->
 
 <%= content_tag :div, id: 'information-menu', class: "" do %>
+
   <%= content_tag :div, class: "title" do %>
     <%= image_tag("icons_menu/capacities.png")  %>Building
   <% end %>
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br />
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br />
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br />
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br />
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br />
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br />
-aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa<br />
-  aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+
+  <%= content_tag :div, id: 'information-menu-elements', class: 'hidden' do%>
+    <%= link_to "#", class: "element" do %>
+      Humainssssssssssssssaaaaaaaaaaaaaaaaaa
+    <% end %>
+  <% end %>
+
+  <%= content_tag :div, id: 'information-menu-map', class: 'hidden' do %>
+    <%= content_tag :div, id: 'map-ressource', class: 't-center margin-top-20' do %>
+
+      <%= text_field_tag('x-map-ressource', nil,
+                         placeholder: 'x', class: "gui-flat little silver") %>
+      <%= text_field_tag('y-map-ressource', nil,
+                         placeholder: 'y', class: "gui-flat little silver") %>
+      <%= text_field_tag('value-map-ressource', nil,
+                         placeholder: 'value', class: "gui-flat little silver") %>
+
+      <%= content_tag :div, class: 'margin-top-10' do %>
+        <button class='button-map button green no-padding' ref='wood'>
+          <%= image_tag('icons_menu/wood_icon.png', class: 'v-middle') %>
+        </button>
+        <button class='button-map button yellow no-padding' ref='gold'>
+          <%= image_tag('icons_menu/gold_icon.png', class: 'v-middle') %>
+        </button>
+      <% end %>
+    <% end %>
+
+    <%= content_tag :div, id: 'map-level', class: 'padding-top-10 hidden' do %>
+      <button class='button-map button green selected padding-5 margin-left-20' ref='up'>
+        <%= image_tag('icons_menu/up.png') %>
+      </button>
+      <button class='button-map button green selected padding-5 margin-left-10' ref='up-7'>
+        <%= image_tag('icons_menu/up_big.png') %>
+      </button>
+      <button class='button-map button green selected padding-5 margin-left-10' ref='down'>
+        <%= image_tag('icons_menu/down.png') %>
+      </button>
+      <button class='button-map button green selected padding-5 margin-left-10' ref='down-7'>
+        <%= image_tag('icons_menu/down_big.png') %>
+      </button>
+    <% end %>
+
+    <%= content_tag :div, id: 'map-generate', class: 'padding-top-10 padding-left-15 hidden' do %>
+      <%= text_field_tag('x-map-generate', nil,
+                         placeholder: 'x', class: "gui-flat little silver") %>
+      <%= text_field_tag('y-map-generate', nil,
+                         placeholder: 'y', class: "gui-flat little silver") %>
+      <button class="button little button-map" ref='generate'>&rarr;</button>
+    <% end %>
+
+  <% end %>
 <% end %>
