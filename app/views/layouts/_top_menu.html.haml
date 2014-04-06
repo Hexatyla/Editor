@@ -1,0 +1,15 @@
+%div#top-menu
+  = link_to "#", class: "first left map-menu hidden", ref: "map-menu-level" do
+    = image_tag("icons_menu/map_level_zone.png")
+  = link_to "#", class: "left map-menu hidden", ref: "map-menu-ressource" do
+    = image_tag("icons_menu/map_ressource.png")
+  = link_to "#", class: "left map-menu hidden", ref: "map-menu-teleport" do
+    = image_tag("icons_menu/map_teleport.png")
+  %div#div-input-top-menu.left.first.input
+    = text_field_tag('input-top-menu', nil, placeholder: 'informations...', class: "gui-flat left")
+    %button#validate-input-top-menu.button ajout
+  = link_to "#", id: 'save-file', class: 'right' do
+    = image_tag("icons_menu/download.png")
+  %div.right
+    %span#file-name.bold
+      Unknown

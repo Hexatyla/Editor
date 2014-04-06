@@ -1,0 +1,30 @@
+%div#information-menu
+  %div.title
+    = image_tag("icons_menu/capacities.png")
+    Building
+
+  %div#information-menu-elements.hidden
+    = link_to "#", class: "element" do
+      Humainssssssssssssssaaaaaaaaaaaaaaaaaa
+
+  %div#information-menu-map.hidden
+    %div#map-ressource.t-center.margin-top-20
+      = text_field_tag('x-map-ressource', nil, placeholder: 'x', class: "gui-flat little silver")
+      = text_field_tag('y-map-ressource', nil, placeholder: 'y', class: "gui-flat little silver")
+      = text_field_tag('value-map-ressource', nil, placeholder: 'value',
+                       class: "gui-flat little silver")
+      %div.margin-top-10
+        %button.button-map.button.green.no-padding{ref: "wood"}
+          = image_tag('icons_menu/wood_icon.png', class: 'v-middle')
+        %button.button-map.button.yellow.no-padding{ref: "gold"}
+          = image_tag('icons_menu/gold_icon.png', class: 'v-middle')
+
+    = content_tag :div, id: 'map-level', class: 'padding-top-10 hidden' do
+      %button.button-map.button.green.selected.padding-5.margin-left-20{ref: "up"}
+        = image_tag('icons_menu/up.png')
+      %button.button-map.button.green.selected.padding-5.margin-left-10{ref: "up-7"}
+        = image_tag('icons_menu/up_big.png')
+      %button.button-map.button.green.selected.padding-5.margin-left-10{ref: "down"}
+        = image_tag('icons_menu/down.png')
+      %button.button-map.button.green.selected.padding-5.margin-left-10{ref: "down-7"}
+        = image_tag('icons_menu/down_big.png')

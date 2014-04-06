@@ -46,6 +46,8 @@ GEM
     erubis (2.7.0)
     execjs (2.0.2)
     fssm (0.2.10)
+    haml (4.0.5)
+      tilt
     hike (1.2.3)
     i18n (0.6.9)
     jbuilder (1.5.3)
@@ -126,6 +128,7 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   compass-rails
   execjs
+  haml
   jbuilder (~> 1.2)
   jquery-rails
   pg
