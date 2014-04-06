@@ -1,9 +1,0 @@
-%div#right-menu
-  %div#title Hexatyla Editor
-  - @link_menu.each do |obj|
-    = link_to(obj.getLink()) do
-      = content_tag :div, class: "choice-categorie", ref: "#{obj.getName()}" do
-        = content_tag(:div, "none", class: "information-choice-categorie hidden", ref: "#{obj.getName()}")
-        = image_tag(obj.getImage(), class: "cube-24")
-        = image_tag(obj.getNewImage(), class: "hidden")
-        = obj.getName()

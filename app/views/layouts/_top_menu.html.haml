@@ -1,15 +1,16 @@
-%div#top-menu
-  = link_to "#", class: "first left map-menu hidden", ref: "map-menu-level" do
-    = image_tag("icons_menu/map_level_zone.png")
-  = link_to "#", class: "left map-menu hidden", ref: "map-menu-ressource" do
-    = image_tag("icons_menu/map_ressource.png")
-  = link_to "#", class: "left map-menu hidden", ref: "map-menu-teleport" do
-    = image_tag("icons_menu/map_teleport.png")
-  %div#div-input-top-menu.left.first.input
-    = text_field_tag('input-top-menu', nil, placeholder: 'informations...', class: "gui-flat left")
-    %button#validate-input-top-menu.button ajout
-  = link_to "#", id: 'save-file', class: 'right' do
-    = image_tag("icons_menu/download.png")
-  %div.right
-    %span#file-name.bold
-      Unknown
+%div#top-menu.navbar.navbar-inverse.navbar-fixed-top{role: "navigation"}
+  %div.container-fluid
+    %div.navbar-header
+      = link_to "Hexatyla Editor", "/", class: 'navbar-brand'
+    %div.navbar-collapse.collapse
+      %ul.nav.navbar-nav.navbar-right
+        %li
+          %button.btn.btn-primary.btn-sm.margin-right-5{style: 'margin-top: 7px'}
+            = image_tag("icons_menu/download.png", class: 'cube-24 glyphicon')
+        %li.active
+          = link_to "unknow.hxtl", "#", id: "file-name"
+      %div
+        - @link_menu.each do |obj|
+          %button.btn.btn-primary.btn-sm.margin-right-5{style: 'margin-top: 7px'}
+            = image_tag(obj.getImage(), class: 'cube-24')
+            = image_tag(obj.getNewImage(), class: 'w-32 hidden')

@@ -13,6 +13,11 @@
  */
 
 @import "base";
+@import "bootstrap";
+
+a:hover {
+  text-decoration:none;
+}
 
 body {
   @extend .background-mate, .font-12;
@@ -25,21 +30,18 @@ a {
 /* Begin : Left Menu */
 #right-menu {
 
-  @extend .fixe, .fleft, .full-height;
-  width: 180px;
-  z-index: 50;
   background-color: $blue10;
 
-  #title {
+ /* #title {
     @extend .bold, .font-18, .padding-15;
     color: #96bee2;
     background-color: $blue8;
     height: 20px;
-  }
+  }*/
 
   .choice-categorie {
     @extend .font-14;
-    padding: 15px 2px 15px 10px;
+    padding: 6px 5px 3px 0px;
     color: $light_blue_font;
 
     &:hover {
@@ -60,7 +62,23 @@ a {
 }
 /* End : Left Menu */
 
-/* Begin : Top Menu */
+#top-menu {
+  background-color: $blue6;
+
+  a.navbar-brand {
+    @extend .t-center, .margin-right-10;
+    color: #96bee2;
+    background-color: $blue8;
+    width: 225px;
+
+    &:hover {
+      color: white;
+    }
+  }
+}
+
+
+/* Begin : Top Menu
 #top-menu {
   @extend .full-width, .fixe;
   height: 50px;
@@ -123,19 +141,15 @@ a {
 
 /* Begin : Information menu */
 #information-menu {
-  @extend .fixe, .full-height;
-
   overflow: hidden;
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
 
-  width: 270px;
-  margin-left: 180px;
+  @extend .w-225;
   background-color: $link_light_grey;
 
   div.title {
     @extend .white, .padding-left-20, .padding-right-20, .padding-top-10, .padding-bottom-10, .bold;
-    margin-top: 50px;
     background-color:$dark_grey_blue;
 
     img {

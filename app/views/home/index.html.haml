@@ -1,5 +1,7 @@
-= render 'layouts/left_menu'
 = render 'layouts/top_menu'
-= render 'layouts/information_menu'
-%div#home-content
-    = render 'layouts/data_content'
+%div.container-fluid
+  %div.row
+    = render 'layouts/left_menu'
+    = render 'layouts/information_menu'
+/   %div#home-content
+/     = render 'layouts/data_content'
