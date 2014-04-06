@@ -9,3 +9,5 @@ Next version of this editor use RAILS, SASS, and more news popular techno !!
 You can see the 'trunk' branch, it's a development branch.
 
 ======
+
+lead development Hexatyla Editor : Clovis KYNDT (manawasp)
